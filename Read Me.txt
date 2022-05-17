@@ -1,0 +1,89 @@
+
+3D Graphing Program for TI-83+
+------------------------------
+
+*All the files included must be put on the calculator for the program to work
+------------------------------
+
+Upon running the program a home screen will be displayed with the following options
+ - Z= 
+	a. this is where the equation is entered with variables X and Y as the variables z is related to in some way
+	b. the equation does not need to exist at all points within the defined window because imaginary z values will be omitted. 
+	c. division by zero will crash the program
+ - Window
+	a. the window can be specified; the initial view display will be on the X-Z axis 
+ 	b. xgrid and ygrid refer the the number of lines for the grid on the x and y planes 
+ - Zoom 
+	a. Prompt for the zoom factor, or how much the image will scale zooming in or out(i.e. scale factor  = 1.1 means the image is scaled by 10%)
+ - Graph
+ 	a. Graphs the equation
+ - Exit 
+	a. exits the program
+
+------------------------------
+
+Controls 
+
+*any prompt needs to receive a value
+
+ - Home Screen
+	a. up and down are used to scroll through the menu options
+	b. Enter is used to enter a menu option
+	c. z= and zoom will only close after the user inputs and equation or scale value respectively
+		Shortcuts:
+			a. y= opens z=
+			b. window opens window
+			c. zoom opens zoom
+			b. graph starts the graphing sequence
+			e. Clear is exit
+
+ - Window Screen 
+	a. up and down are used to scroll through the window options 
+	b. enter opens the tab 
+	c. upon opening a tab values must be input and then enter must be pressed to return to the window menu
+	b. graph brings the user to the home screen
+
+- Loading screen
+	a. on will break the program as it will with any other ti-basic program but after a bit of time it should finish 
+
+- Graph screen
+	a. up and down rotate the image around the x-axis 
+	b. left and right rotate the image around the z-axis 
+	c. vars and clear rotate the image around the y-axis 
+	d. y= return to the home screen
+	e. window opens the window screen
+		a. graph is used to exit the window screen
+	f. zoom prompts the zoom factor, a value must be entered and then enter must be pressed to return to the graph screen
+	g. 2nd exits the program
+
+------------------------------
+
+Operations 
+
+ - To Note
+	a. when an equation is input it is stored in str1 with the x's and y's replaced with L1 and L2 respectively.
+	   the string can then be stored to a list and the values will automatically generate, but then the new list will be tied to lists L1 and L2 which creates problems when rotating.
+	   To get around this a temporary list is used to store the z values and then move the z values to a permanent list at which point the temporary list is deleted. 
+	b. When the y= tab is opened after an equation is input the old equation is displayed under the new text so that it can be retyped if necessary. 
+	   The string displayed does not count as input meaning a string will need to be input.(the same applies to zoom factor and window settings)
+	c. Axis
+		a. the x-axis is the same as on the calculator(left to right)
+		b. the y-axis is the *depth of the image 
+		c. the z-axis is the calculators y-axis(up to down)
+	d. Zoom factor does not increase the coordinate bounds of the equations but rather scales their screen size to better display the x-y edges. 
+	e. Imaginary numbers are completely removed from the coordinates displayed leaving square edges(seen in the case of a sphere)
+	d. XGrid and YGrid
+		a. XGrid is the value of grid lines parallel to the y-axis 
+		b. YGrid is the value of grid lines parallel to the x-axis
+		c. By default both values are 10 which is a good balance between memory and quality. 
+		d. These should not be changed unless it is absolutely necessary as it may cause memory errors or may display lines which look out of place.
+	e. Window Max and Min need to be correctly assigned(max > min NOT min > max) otherwise the program will crash. 
+
+
+*depth is orthographic not perspective. 
+
+	
+
+
+ 
+
